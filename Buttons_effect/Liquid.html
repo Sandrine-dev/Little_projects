@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Css/Liquid.css">
+
+    <title>Liquid button</title>
+</head>
+<body>
+    <div><a href="../Index.html"><i class="fas fa-angle-double-left" style="color: black;"></i></a></div>
+    <h2>CSS effect, liquid button</h2>
+    <div class="section">
+        <div class="button">
+            <i class="fab fa-linkedin"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="button">
+            <i class="fab fa-github"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="button">
+            <i class="fas fa-envelope"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="button">
+            <i class="fas fa-at"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="button">
+            <i class="fas fa-file"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="button">
+            <i class="fas fa-campground"></i>
+            <div class="blurred">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <svg>
+        <defs>
+            <filter id='goo'>
+                <feGaussianBlur in='SourceGraphic' stdDeviation="10" result="name"/>
+                <feColorMatrix in='name' mode="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 30 -15" result="aab"/>
+                <feBlend in="SourceGraphic" in2="aab"/>   
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="Creator">
+        <p>Source <a href="https://www.youtube.com/c/Frankslaboratory">Franks Labotary</a></p>
+    </div>
+
+</body>
+</html>

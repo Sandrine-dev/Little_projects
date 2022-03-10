@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.0.0"></script>
+
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .center{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px
+        }
+
+        button{
+            align-items: center;
+            margin: 5px;
+            padding: 5px 15px;
+        }
+        
+        i{
+            font-size: 15px;
+        }
+        #Creator{
+            bottom: 0;
+            position: absolute;
+            right: 0;
+        }
+
+        #Creator p{
+            margin-right: 25px;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+        a i{
+            font-size: 25px;
+        }
+
+        .back{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px
+        }
+    </style>
+
+    <title>Musique javascript</title>
+</head>
+<body>
+    <div class="back"><a href="../Index.html"><i class="fas fa-angle-double-left" style="color: black;"></i></a></div>
+    <div class="center">
+        <button id="start"><i class="fas fa-play"></i></button>
+        <button id="stop"><i class="fas fa-stop"></i></button>
+    </div>
+
+    <script>
+        const magenta_url = 'https://storage.googleapis.com/download.magenta.tensorflow.org/'; 
+        const model = new mm.MusicVAE(magenta_url + 'tfjs_checkpoints/music_vae/trio_4bar_lokl_small_q1'); 
+        const player = new mm.Player();
+       
+
+        window.addEventListener('load', () => {
+            const startEl = document.getElementById('start');
+            const stopEl = document.getElementById('stop');
+
+            const start = () => {
+                mm.Player.tone.context.resume()
+
+                model.initialize().then(
+                    
+                    function sampleAndPlay() {
+                        return model.sample(1)
+                                .then((samples) => player.start(samples[0]))
+                                .then(sampleAndPlay)
+                    })
+            }
+
+            const stop = () => {
+                player.stop();
+
+            };
+
+            model.initialize().then(stop);
+
+            startEl.addEventListener('click', () => {
+                start()
+            })
+
+            stopEl.addEventListener('click', () => {
+                stop()
+            })
+        })
+  </script>
+
+  <p>Source <a href="https://magenta.tensorflow.org/">magenta</a></p>
+</body>
+
+</html>
