@@ -8,25 +8,6 @@ h2{
     text-align: center;
 }
 
-#Creator{
-    bottom: 0;
-    position: absolute;
-    right: 0;
-}
-
-#Creator p{
-   margin-right: 25px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-i{
-    font-size: 25px;
-}
-
 .portrait {
     top: 0;
     width: 200px;
@@ -34,7 +15,7 @@ i{
     margin: 50px auto;
     position: relative;
     transition: .1s;
-
+    cursor: pointer;
 }
 
 .part{

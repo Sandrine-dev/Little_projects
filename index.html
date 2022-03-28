@@ -5,57 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="./Css/style.css">
+     <link rel="stylesheet" type="text/css" href="./Css/main.css">
 
     <title>My small projects</title>
 </head>
 <body>
-    <div id="Corps">
-        <div id="About">
-            <h2>Introduction <span>>></span></h2>
-            <p>
-                Je m'appelle Sandrine, je suis Web developpeuse depuis février 2021, je suis toujours à la recherche de nouvelle connaissance mais aussi d'amusement dans le code. J'ai donc créer ce petit site pour partager des petit projets ou je peux tester de petites fonctionnalités, des animations, des designs,... etc. <br/>
-                Je vous renvois à mon <a href="https://sandrine-dev.github.io/Portfolio/" target="_blank">Portfolio</a> si cela vous interesse!<br/>
-                <br/>
-                Les sources seront toujours indiqués en bas de page!
-            </p>
-        </div>
-        
-        <div class="menu">
-            <div>
-                <button class="accordion" type="button">Button effect</button>
-                <div class="panel">
-                    <a href="./Buttons_effect/3D_button.html" class="btn" type="button">
-                        <span>3D button</a></span>
-                    </a>
-                    <a href="./Buttons_effect/Liquid.html" class="btn" type="button">
-                        <span>Liquid button</span>
-                    </a>
+
+    <div class="top">
+            <header>
+                <div class="container">
+                    <h1>Welcome</h1>
                 </div>
-            </div>
-            <div>
-                <button class="accordion" type="button">Music Play</button>
-                <div class="panel">
-                    <a href="./Music/First_step.html"  class="btn" type="button">
-                        <span>First Step</span>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <button class="accordion" type="button">Image Animation</button>
-                <div class="panel">
-                    <a href="./Image_animation/Breaking.html"  class="btn" type="button">
-                        <span>Breaking Image</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="Creator">
-            <p>Source <a href="https://dev.to/">dev.to</a></p>
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </header>
+    </div>
+
+    <div class="about">
+        <div class="content">
+            <p> Je m'appelle Sandrine, je suis Web developpeuse depuis février 2021, je suis toujours à la recherche de nouvelle connaissance mais aussi d'amusement dans le code.<br><br>J'ai donc créer ce petit site pour partager des petit projets ou je peux tester de petites fonctionnalités, des animations, des designs,... etc.</p>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <div class="corpse">
+        <section>
+            <div class="button">
+                <div class="title">
+                    <h2>Button</h2>
+                </div>
+                <div class="menu">
+                    <a href="./Buttons_effect/3D_button.html">Effet 3D</a>
+                    <span></span>
+                    <a href="./Buttons_effect/Liquid.html">Effet Liquide</a>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="image">
+                <div class="title">
+                    <h2>Image</h2>
+                </div>
+                <div class="menu">
+                    <a href="./Image_animation/Breaking.html">Effet découpage</a>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="music">
+                <div class="title">
+                    <h2>Musique</h2>
+                </div>
+                 <div class="menu">
+                    <a href="#">Prochainement</a>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="showcase">
+                <div class="title">
+                    <h2>Site</h2>
+                </div>
+               <div class="menu">
+                    <a href="#">Prochainement</a>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="bottom">
+        <footer>
+            <div class="link">
+                <a href="https://www.linkedin.com/in/sandrine-volpi-6a5582143/" target="_blank">
+                    <span class="fab fa-linkedin"></span>
+                </a>
+                <a href="https://sandrine-dev.github.io/Portfolio/" target="_blank">
+                    <span class="fas fa-at"></span>
+                </a>
+                <a href="./asset/CV.pdf" target="_blank">
+                    <span class="fas fa-file"></span>
+                </a>
+                <a href="https://github.com/Sandrine-dev" target="_blank">
+                    <span class="fab fa-github"></span>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    
+
+
     
 </body>
 </html>
