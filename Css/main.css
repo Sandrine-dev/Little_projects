@@ -29,7 +29,7 @@ header{
 }
 .container h1 {
   	font-size: 40px;
-	color: white;
+  	color: white;
   	font-weight: 200;
 }
 
@@ -125,7 +125,7 @@ header{
 }
 
 footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 75px;
   background-color: #50a3a2;
@@ -168,9 +168,26 @@ footer .link{
 
 .corpse{
     position: relative;
-    margin: 40px auto;
-    z-index: 2;
+    margin: 75px auto;
+
 }
+
+@media (max-width: 1023px) {
+	.bg-bubbles{
+    	width: 80%;
+  }
+
+}
+
+@media (max-width: 734px) {
+	.bg-bubbles{
+    	visibility: hidden;
+      width: 0px;
+  }
+
+}
+
+
 
 @-webkit-keyframes square {
   0% {

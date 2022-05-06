@@ -3,6 +3,10 @@ body, html {
  margin: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 header{
     background-image: url(../image/IMG_20180204_232838_939.jpg);
     height: 100%;
@@ -18,10 +22,174 @@ header h1{
     align-self: center;
     background-color: rgba(253, 251, 251, 0.5);
     width: 475px;
-
     text-align: center;
     font-size: 75px;
     color: rgba(0, 0, 0, 0.8);
-
     border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+  margin-left: 25px;
+}
+
+span{
+    position: fixed;
+    z-index: 2;
+    left: 2%;
+    top: 2%;
+    background-color: rgba(253, 251, 251, 0.5);
+    border-radius: 50%;
+}
+
+span i{
+    padding: 10px;
+}
+
+span::after{
+    background-color: black;
+}
+
+.sidenav ul li a{
+    transition: 0.5s;
+    position: relative;
+    display: block;
+}
+
+.sidenav ul li a::after{
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    content: "";
+    top: 100%;
+    background-color: white;
+}
+
+.sidenav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#About{
+    margin: 5% 10%;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 75px;
+}
+
+h4{
+    font-size: 23px;
+}
+
+#About p{
+    margin: 5px 2px 15px 2px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.row {
+  margin: 5% 8%;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+footer{
+    bottom: 0;
+    height: 75px;
+    background-color: #50a3a2;
+    width: 100%;
+    text-align: center;
+}
+
+footer .link{
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.link a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin: 0px 25px;
+}
+
+.link a:hover{
+ color: black;
+}
+
+link a i{
+    display: inherit;
 }

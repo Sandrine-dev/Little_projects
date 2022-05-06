@@ -4,6 +4,9 @@ h2{
     margin: 35px auto;
 }
 
+.corpse{
+    z-index: 2;
+}
 
 
 section {
@@ -105,4 +108,43 @@ i{
 .button:hover span:nth-of-type(4){
     transform: translate(30px, 16px);
     transition-delay: .2s;
+}
+
+@media (max-width: 630px){
+    h2{
+        margin-top: 10px;
+        margin-left: 0px;
+        width: 90%;
+    }
+    .corpse{
+        width: 90%;
+        margin-left:0px ;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .button{
+        margin-bottom: 30px;
+        margin-left:0px;
+        padding: 0px;
+    }
+
+    footer{
+        z-index: 1000;
+    }
+
+    header{
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 715px){
+    section{
+        width: 90%;
+    }
 }

@@ -5,20 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/Site_one.css">
 
     <title>Site one</title>
 </head>
 <body>
-
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <li>
+                <a href="#About">About</a>
+            </li>
+            <li>
+                <a href="#Gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#Contact">Contact</a>
+            </li>
+            <li>
+                <a href="https://sandrine-dev.github.io/Little_projects/">Go back</a>
+            </li>
+        </ul>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars" id="toggler"></i></span>
 
     <header>
         <h1>Welcome in Boston</h1>
     </header>
 
-    <footer></footer>
+    <section id="About">
+        <h3>
+            About Boston
+        </h3>
+            <h4>History</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eaque voluptas minima inventore incidunt perspiciatis. Vel consequuntur aspernatur reprehenderit delectus, iste magnam, eius voluptatem placeat ea, consequatur esse rem excepturi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, quod praesentium modi esse omnis iure possimus error vero, perferendis aliquam odio! Temporibus nisi et sit commodi eos vel ut eveniet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe assumenda quae incidunt dignissimos mollitia delectus vel! Atque porro, officiis doloremque nobis et sed delectus dignissimos aperiam, aliquam adipisci quae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eaque voluptas minima inventore incidunt perspiciatis. Vel consequuntur aspernatur reprehenderit delectus, iste magnam, eius voluptatem placeat ea, consequatur esse rem excepturi!</p>
 
-    
+            <h4>City</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eaque voluptas minima inventore incidunt perspiciatis. Vel consequuntur aspernatur reprehenderit delectus, iste magnam, eius voluptatem placeat ea, consequatur esse rem excepturi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, quod praesentium modi esse omnis iure possimus error vero, perferendis aliquam odio! Temporibus nisi et sit commodi eos vel ut eveniet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe assumenda quae incidunt dignissimos mollitia delectus vel! Atque porro, officiis doloremque nobis et sed delectus dignissimos aperiam, aliquam adipisci quae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eaque voluptas minima inventore incidunt perspiciatis. Vel consequuntur aspernatur reprehenderit delectus, iste magnam, eius voluptatem placeat ea, consequatur esse rem excepturi!</p>
+    </section>
+
+    <section id="Gallery">
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20181104_114934.jpg" alt="Fountain" style="width:100%">
+                    <h4>Fountain</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20180107_143623.jpg" alt="Avenue" style="width:100%">
+                    <h4>Avenue</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20180113_103119.jpg" alt="Building" style="width:100%">
+                    <h4>Building</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20180113_113639.jpg" alt="Building" style="width:100%">
+                    <h4>Building</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20181104_114302.jpg" alt="Port" style="width:100%">
+                    <h4>Port</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20180107_142056.jpg" alt="Building" style="width:100%">
+                    <h4>Building</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20181104_115124.jpg" alt="Port" style="width:100%">
+                    <h4>Port</h4>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="./image/20181104_142603.jpg" alt="Park" style="width:100%">
+                    <h4>Park</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Contact">
+         <div class="link">
+                <a href="https://www.linkedin.com/in/sandrine-volpi-6a5582143/" target="_blank">
+                    <div class="fab fa-linkedin"></div>
+                </a>
+                <a href="https://sandrine-dev.github.io/Portfolio/" target="_blank">
+                    <div class="fas fa-at"></div>
+                </a>
+                <a href="./asset/CV.pdf" target="_blank">
+                    <div class="fas fa-file"></div>
+                </a>
+                <a href="https://github.com/Sandrine-dev" target="_blank">
+                    <div class="fab fa-github"></div>
+                </a>
+            </div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
 </body>
 </html>
